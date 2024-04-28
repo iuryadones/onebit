@@ -9,7 +9,8 @@ $ rustc main.rs && ./main
 ```
 
 ```
-| Entropy | Checksum | Entropy + Checksum | Mnemonic |  |   32    |    1     |         33         |    3     |
+| Entropy | Checksum | Entropy + Checksum | Mnemonic |
+|   32    |    1     |         33         |    3     |
 |   64    |    2     |         66         |    6     |
 |   96    |    3     |         99         |    9     |
 |   128   |    4     |        132         |    12    |
