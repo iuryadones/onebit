@@ -11,4 +11,19 @@ fn generating_the_mnemonic() {
 
 fn main() {
     generating_the_mnemonic();
+    println!();
+
+    let binary = "00110010001 01010011000 0011001011";
+    let checksum = "0";
+    println!("Raw binary: {}", binary);
+    println!("Binary checksum: {}", checksum);
+    let binary_splited:Vec<&str> = binary.split(" ")
+                                         .collect();
+    println!("{:?}", binary_splited);
+
+    for idx in 0..binary_splited.len() {
+        let str_binary = binary_splited[idx];
+        println!("{:?}", str_binary);
+    }
+
 }
