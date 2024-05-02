@@ -1,11 +1,4 @@
-fn main() {
-    let hexadecimal_value = convert_to_hex_from_binary(
-        "00000000000000000000010000000000"
-    );
-    println!("Converted: {}", hexadecimal_value);
-}
-
-fn convert_to_hex_from_binary(binary: &str) -> String {
+pub fn convert_to_hex_from_binary(binary: &str) -> String {
     let padding_count = 4 - binary.len() % 4;
     let padded_binary = if padding_count > 0 {
         ["".repeat(padding_count), binary.to_string()].concat()

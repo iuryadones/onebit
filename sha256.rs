@@ -148,7 +148,7 @@ impl Sha256 {
     }
 }
 
-fn to_hex(data: &[u8; 32]) -> String {
+pub fn to_hex(data: &[u8; 32]) -> String {
     let mut hex = String::new();
 
     for &b in data {
@@ -156,10 +156,4 @@ fn to_hex(data: &[u8; 32]) -> String {
     }
 
     hex
-}
-
-fn main() {
-    let mut sha256 = Sha256::default();
-    sha256.update("00000400".as_bytes());
-    println!("{}", to_hex(&sha256.finish()).as_str());
 }

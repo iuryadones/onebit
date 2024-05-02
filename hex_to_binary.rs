@@ -1,10 +1,7 @@
-fn main() {
-    let binary_value = convert_to_binary_from_hex("0xea");
-    println!("Converted: {}", binary_value);
-}
-fn convert_to_binary_from_hex(hex: &str) -> String {
+pub fn convert_to_binary_from_hex(hex: &str) -> String {
     hex[2..].chars().map(to_binary).collect()
 }
+
 fn to_binary(c: char) -> &'static str {
     match c {
         '0' => "0000",
